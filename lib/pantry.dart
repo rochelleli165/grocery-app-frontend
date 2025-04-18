@@ -28,23 +28,7 @@ class _PantryPageState extends State<PantryPage> {
   final TextEditingController _controller = TextEditingController();
 
   static const List<String> _kOptions = <String>[
-    "soy-sauce",
-    "water",
-    "cabbage",
-    "black-pepper",
-    "carrot",
-    "chicken-thigh",
-    "green-onion",
-    "katsuobushi",
-    "mentsuyu",
-    "oil",
-    "onion",
-    "udon",
-    "toppings",
-    "mirin",
-    "sugar",
-    "dashi",
-    "salt"
+   
   ];
 
   @override
@@ -133,6 +117,12 @@ class _PantryPageState extends State<PantryPage> {
                                     child: IntrinsicWidth(
                                   child: Row(children: [
                                     Padding(padding: const EdgeInsets.fromLTRB(2.0, 0.0, 0.0, 0.0),),
+                                    Container(
+                                      height: 15,
+                                      width: 15,
+                                      child: Image.asset('assets/icons/${c.ingredient}.png')
+                                      ),
+                                    Padding(padding: const EdgeInsets.fromLTRB(0.0, 0.0, 2.0, 0.0),),
                                     Text('${c.ingredient} ${c.amount}'),
                                     IconButton(
                                         padding: EdgeInsets.all(8.0),
@@ -181,6 +171,16 @@ class _PantryPageState extends State<PantryPage> {
                               TableCellVerticalAlignment.middle,
                           children: pantryViewModel.pantryItems.entries
                               .map((e) => TableRow(children: [
+                                     TableCell(
+                                      child: Container(
+                                          height: 25,
+                                          alignment: Alignment.center,
+                                          width: 25,
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(3.0),
+                                            child: Image.asset('assets/icons/${e.key}.png'),
+                                          )),
+                                    ),
                                     TableCell(child: Text(e.key)),
                                     TableCell(child: Text(e.value.toString()))
                                   ]))

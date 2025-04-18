@@ -6,11 +6,11 @@ class StoreData {
 }
 
 class ItemData {
-  ItemData(this.deal, this.ingredient, this.name, this.price, this.sale, this.amount);
-  final String deal;
+  ItemData(this.ingredient, this.name, this.price, this.sale, this.amount, this.ingredientType);
   final String ingredient;
   final String name;
   final String price;
   final String sale;
+  final String ingredientType;
   int amount;
 }

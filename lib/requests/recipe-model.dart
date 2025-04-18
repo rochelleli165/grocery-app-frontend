@@ -46,4 +46,7 @@ class RecipeModel {
 class Recipe {
   Recipe(this.recipeName);
   final String recipeName;
+  // final String[] recipeIngredients;
+  // final String recipeLink;
+  // final String recipeAuthor;
 }

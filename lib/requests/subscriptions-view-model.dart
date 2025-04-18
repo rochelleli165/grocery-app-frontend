@@ -4,7 +4,7 @@ import 'store-model.dart';
 
 class SubscriptionsViewModel extends ChangeNotifier {
   final SubscriptionsModel model;
-  Map<String, StoreData> subscriptions = {};
+  List<StoreData> subscriptions = [];
   String? errorMessage;
   SubscriptionsViewModel(this.model);
 
